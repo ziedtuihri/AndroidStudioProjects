@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="122dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/edtNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="87dp"
+            android:layout_weight="1"
+            android:background="@android:color/background_light"
+            android:ems="10"
+            android:hint="0.000"
+            android:inputType="numberDecimal"
+            android:textSize="36sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="156dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/id7"
+            android:layout_width="wrap_content"
+            android:layout_height="136dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic7" />
+
+        <ImageButton
+            android:id="@+id/id8"
+            android:layout_width="wrap_content"
+            android:layout_height="136dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic8" />
+
+        <ImageButton
+            android:id="@+id/id9"
+            android:layout_width="wrap_content"
+            android:layout_height="134dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic9" />
+
+        <ImageButton
+            android:id="@+id/imageButton6"
+            android:layout_width="wrap_content"
+            android:layout_height="134dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_back" />
+
+        <ImageButton
+            android:id="@+id/imageButton7"
+            android:layout_width="wrap_content"
+            android:layout_height="134dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_off" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="152dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/id4"
+            android:layout_width="wrap_content"
+            android:layout_height="130dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic4" />
+
+        <ImageButton
+            android:id="@+id/id5"
+            android:layout_width="wrap_content"
+            android:layout_height="130dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic5" />
+
+        <ImageButton
+            android:id="@+id/id6"
+            android:layout_width="wrap_content"
+            android:layout_height="132dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic6" />
+
+        <ImageButton
+            android:id="@+id/id_1"
+            android:layout_width="wrap_content"
+            android:layout_height="130dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_minus" />
+
+        <ImageButton
+            android:id="@+id/id_2"
+            android:layout_width="wrap_content"
+            android:layout_height="128dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_multiply" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="147dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/id1"
+            android:layout_width="wrap_content"
+            android:layout_height="118dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic1" />
+
+        <ImageButton
+            android:id="@+id/id2"
+            android:layout_width="wrap_content"
+            android:layout_height="120dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic2" />
+
+        <ImageButton
+            android:id="@+id/id3"
+            android:layout_width="wrap_content"
+            android:layout_height="118dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic3" />
+
+        <ImageButton
+            android:id="@+id/id_3"
+            android:layout_width="wrap_content"
+            android:layout_height="118dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_plus" />
+
+        <ImageButton
+            android:id="@+id/id_4"
+            android:layout_width="wrap_content"
+            android:layout_height="120dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_div" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#00000000"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/id0"
+            android:layout_width="96dp"
+            android:layout_height="114dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic0" />
+
+        <ImageButton
+            android:id="@+id/imageButton19"
+            android:layout_width="wrap_content"
+            android:layout_height="113dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_comma" />
+
+        <ImageButton
+            android:id="@+id/imageButton20"
+            android:layout_width="wrap_content"
+            android:layout_height="113dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_mod" />
+
+        <ImageButton
+            android:id="@+id/imageButton21"
+            android:layout_width="wrap_content"
+            android:layout_height="114dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_equal" />
+    </LinearLayout>
+</LinearLayout>
