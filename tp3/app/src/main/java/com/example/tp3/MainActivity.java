@@ -58,9 +58,81 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+        b0.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                chiffreClick("0");
+            }
+        });
 
+
+        b1.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                chiffreClick("1");
+            }
+        });
+
+        b2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                chiffreClick("2");
+            }
+        });
+
+        b3.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                chiffreClick("3");
+            }
+        });
+
+        b4.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                chiffreClick("4");
+            }
+        });
+
+        b5.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                chiffreClick("5");
+            }
+        });
+
+        b6.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                chiffreClick("6");
+            }
+        });
+
+        b7.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                chiffreClick("7");
+            }
+        });
+
+        b8.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                chiffreClick("8");
+            }
+        });
+
+        b9.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                chiffreClick("9");
+            }
+        });
 
     }
+
+    public void chiffreClick(String str) {
+        if (update) {
+            update = false;
+        } else {
+            if (!ecran.getText().equals("0"))
+                str = ecran.getText() + str;
+        }
+        ecran.setText(str);
+    }
+
+
+
 
 
 
