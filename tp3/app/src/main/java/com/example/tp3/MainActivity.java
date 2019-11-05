@@ -28,12 +28,13 @@ public class MainActivity extends AppCompatActivity {
     ImageButton buttonC;
     ImageButton buttonEgal;
     ImageButton point;
-    
+    ImageButton buttonMod;
 
     private boolean update = false;
     private String operateur = "";
     private double chiffre1;
     private boolean clicOperateur = false;
+    private String str,chp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,8 +59,22 @@ public class MainActivity extends AppCompatActivity {
         buttonDiv =  findViewById(R.id.id_4);
         buttonC = findViewById(R.id.buttonC);
         buttonEgal = findViewById(R.id.buttonEgal);
-
+        point = findViewById(R.id.point);
+        buttonMod = findViewById(R.id.buttonMod);
                 ecran = findViewById(R.id.edtNumber);
+
+
+        buttonMod.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                modF();
+            }
+        });
+
+        point.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                pointF();
+            }
+        });
 
         buttonPlus.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -171,6 +186,26 @@ public class MainActivity extends AppCompatActivity {
     }
 ////////////////////////////////////////////////////////////////////////////////////////
 
+    public void modF(){
+        if(clicOperateur){
+            calcul();
+            ecran.setText(String.valueOf(chiffre1));
+        }else{
+            chiffre1 = Double.valueOf(ecran.getText().toString()).doubleValue() / 100;
+            ecran.setText(String.valueOf(chiffre1));
+            clicOperateur = true;
+        }
+    }
+
+    public void pointF(){
+        chp = ".";
+        if (update) {
+            update = false;
+        } else {
+                str = ecran.getText() + chp;
+        }
+        ecran.setText(str);
+    }
 
     public void plusClick(){
 
