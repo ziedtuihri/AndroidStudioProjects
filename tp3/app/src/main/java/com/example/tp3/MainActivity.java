@@ -25,6 +25,10 @@ public class MainActivity extends AppCompatActivity {
     ImageButton buttonMoins;
     ImageButton buttonDiv;
     ImageButton buttonMul;
+    ImageButton buttonC;
+    ImageButton buttonEgal;
+    ImageButton point;
+    
 
     private boolean update = false;
     private String operateur = "";
@@ -52,10 +56,46 @@ public class MainActivity extends AppCompatActivity {
         buttonMoins =  findViewById(R.id.id_1);
         buttonMul = findViewById(R.id.id_2);
         buttonDiv =  findViewById(R.id.id_4);
+        buttonC = findViewById(R.id.buttonC);
+        buttonEgal = findViewById(R.id.buttonEgal);
 
+                ecran = findViewById(R.id.edtNumber);
 
-        ecran = findViewById(R.id.edtNumber);
+        buttonPlus.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                plusClick();
+            }
+        });
 
+        buttonMoins.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                moinsClick();
+            }
+        });
+
+        buttonDiv.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                divClick();
+            }
+        });
+
+        buttonMul.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                mulClick();
+            }
+        });
+
+        buttonC.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                resetClick();
+            }
+        });
+
+        buttonEgal.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                egalClick();
+            }
+        });
 
 
         b0.setOnClickListener(new View.OnClickListener() {
@@ -63,7 +103,6 @@ public class MainActivity extends AppCompatActivity {
                 chiffreClick("0");
             }
         });
-
 
         b1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -130,11 +169,98 @@ public class MainActivity extends AppCompatActivity {
         }
         ecran.setText(str);
     }
+////////////////////////////////////////////////////////////////////////////////////////
 
 
+    public void plusClick(){
+
+        if(clicOperateur){
+            calcul();
+            ecran.setText(String.valueOf(chiffre1));
+        }else{
+            chiffre1 = Double.valueOf(ecran.getText().toString()).doubleValue();
+            clicOperateur = true;
+        }
+        operateur = "+";
+        update = true;
+    }
+
+    public void moinsClick(){
+        if(clicOperateur){
+            calcul();
+            ecran.setText(String.valueOf(chiffre1));
+        }else{
+            chiffre1 = Double.valueOf(ecran.getText().toString()).doubleValue();
+            clicOperateur = true;
+        }
+        operateur = "-";
+        update = true;
+    }
+
+    public void mulClick(){
+        if(clicOperateur){
+            calcul();
+            ecran.setText(String.valueOf(chiffre1));
+        }else{
+            chiffre1 = Double.valueOf(ecran.getText().toString()).doubleValue();
+            clicOperateur = true;
+        }
+        operateur = "*";
+        update = true;
+    }
 
 
+    public void divClick(){
+        if(clicOperateur){
+            calcul();
+            ecran.setText(String.valueOf(chiffre1));
+        }else{
+            chiffre1 = Double.valueOf(ecran.getText().toString()).doubleValue();
+            clicOperateur = true;
+        }
+        operateur = "/";
+        update = true;
+    }
 
+    public void egalClick(){
+        calcul();
+        update = true;
+        clicOperateur = false;
+    }
+
+    public void resetClick(){
+        clicOperateur = false;
+        update = true;
+        chiffre1 = 0;
+        operateur = "";
+        ecran.setText("");
+    }
+
+    private void calcul(){
+        if(operateur.equals("+")){
+            chiffre1 = chiffre1 + Double.valueOf(ecran.getText().toString()).doubleValue();
+            ecran.setText(String.valueOf(chiffre1));
+        }
+
+        if(operateur.equals("-")){
+            chiffre1 = chiffre1 - Double.valueOf(ecran.getText().toString()).doubleValue();
+            ecran.setText(String.valueOf(chiffre1));
+        }
+
+        if(operateur.equals("*")){
+            chiffre1 = chiffre1 * Double.valueOf(ecran.getText().toString()).doubleValue();
+            ecran.setText(String.valueOf(chiffre1));
+        }
+
+        if(operateur.equals("/")){
+            try{
+                chiffre1 = chiffre1 / Double.valueOf(ecran.getText().toString()).doubleValue();
+                ecran.setText(String.valueOf(chiffre1));
+            }catch(ArithmeticException e){
+                ecran.setText("0");
+            }
+        }
+    }
 
 }
 
