@@ -52,7 +52,7 @@
             app:srcCompat="@drawable/ic9" />
 
         <ImageButton
-            android:id="@+id/imageButton6"
+            android:id="@+id/buttonDel"
             android:layout_width="128dp"
             android:layout_height="128dp"
             android:layout_weight="1"

@@ -29,12 +29,13 @@ public class MainActivity extends AppCompatActivity {
     ImageButton buttonEgal;
     ImageButton point;
     ImageButton buttonMod;
+    ImageButton buttonDel;
 
     private boolean update = false;
     private String operateur = "";
     private double chiffre1;
     private boolean clicOperateur = false;
-    private String str,chp;
+    private String del,str,chp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,8 +62,15 @@ public class MainActivity extends AppCompatActivity {
         buttonEgal = findViewById(R.id.buttonEgal);
         point = findViewById(R.id.point);
         buttonMod = findViewById(R.id.buttonMod);
+        buttonDel = findViewById(R.id.buttonDel);
+
                 ecran = findViewById(R.id.edtNumber);
 
+        buttonDel.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                delF();
+            }
+        });
 
         buttonMod.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -195,6 +203,20 @@ public class MainActivity extends AppCompatActivity {
             ecran.setText(String.valueOf(chiffre1));
             clicOperateur = true;
         }
+    }
+
+    public void delF(){
+        del = ecran.getText().toString();
+        if (update) {
+            update = false;
+        }
+        if(del.substring(0,1) == "0"){
+        chp = "0";
+        }
+        else {
+            chp = del.substring(0,del.length()-1);
+        }
+        ecran.setText(chp);
     }
 
     public void pointF(){
