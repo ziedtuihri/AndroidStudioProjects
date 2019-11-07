@@ -25,16 +25,33 @@ public class MainActivity extends AppCompatActivity {
     foisB = findViewById(R.id.foisB);
     divB = findViewById(R.id.divB);
     textView = findViewById(R.id.textView);
+
+
     }
 
     public void plusClick(View view){
-    String a,b;
-    double r;
-        double k;
+        String a,b;
+        Integer r,k;
+
         a = inputa.getText().toString();
         b = inputa.getText().toString();
-        k = Double.parseDouble(a);
-        r = Double.parseDouble(b);
-textView.setText((int) k);
+        k = Integer.parseInt(a);
+        r = Integer.parseInt(b);
+        textView.setText("votre resultat =   "+(k+r));
+
     }
+
+    public void mClick(View view){
+        String a,b;
+        Integer r,k;
+
+        a = inputa.getText().toString();
+        b = inputa.getText().toString();
+        k = Integer.parseInt(a);
+        r = Integer.parseInt(b);
+        textView.setText("votre resultat =   "+(k-r));
+
+    }
+
+    
 }
