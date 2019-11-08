@@ -18,13 +18,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-    inputa = findViewById(R.id.editText1);
-    inputb = findViewById(R.id.editText2);
-    plusB = findViewById(R.id.plusB);
-    sustractionB = findViewById(R.id.sustractionB);
-    foisB = findViewById(R.id.foisB);
-    divB = findViewById(R.id.divB);
-    textView = findViewById(R.id.textView);
+        inputa = findViewById(R.id.editText1);
+        inputb = findViewById(R.id.editText2);
+        plusB = findViewById(R.id.plusB);
+        sustractionB = findViewById(R.id.sustractionB);
+        foisB = findViewById(R.id.foisB);
+        divB = findViewById(R.id.divB);
+        textView = findViewById(R.id.textView);
 
 
     }
@@ -34,10 +34,10 @@ public class MainActivity extends AppCompatActivity {
         Integer r,k;
 
         a = inputa.getText().toString();
-        b = inputa.getText().toString();
+        b = inputb.getText().toString();
         k = Integer.parseInt(a);
         r = Integer.parseInt(b);
-        textView.setText("votre resultat =   "+(k+r));
+        textView.setText("votre resultat =   "+(k + r));
 
     }
 
@@ -46,12 +46,35 @@ public class MainActivity extends AppCompatActivity {
         Integer r,k;
 
         a = inputa.getText().toString();
-        b = inputa.getText().toString();
+        b = inputb.getText().toString();
         k = Integer.parseInt(a);
         r = Integer.parseInt(b);
-        textView.setText("votre resultat =   "+(k-r));
+        textView.setText("votre resultat =   "+(k - r));
 
     }
 
-    
+    public void fClick(View view){
+        String a,b;
+        Integer r,k;
+
+        a = inputa.getText().toString();
+        b = inputb.getText().toString();
+        k = Integer.parseInt(a);
+        r = Integer.parseInt(b);
+        textView.setText("votre resultat =   "+(k * r));
+
+    }
+
+    public void dClick(View view){
+        String a,b;
+        Integer r,k;
+
+        a = inputa.getText().toString();
+        b = inputb.getText().toString();
+        k = Integer.parseInt(a);
+        r = Integer.parseInt(b);
+        textView.setText("votre resultat =   "+(k / r));
+
+    }
+
 }
