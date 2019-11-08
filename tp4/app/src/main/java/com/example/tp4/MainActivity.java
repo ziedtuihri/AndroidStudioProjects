@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -35,10 +36,13 @@ public class MainActivity extends AppCompatActivity {
 
         a = inputa.getText().toString();
         b = inputb.getText().toString();
-        k = Integer.parseInt(a);
-        r = Integer.parseInt(b);
-        textView.setText("votre resultat =   "+(k + r));
-
+        if(a.equals("") || b.equals("")){
+            afficheP("veriéé les nombre");
+        }else {
+            k = Integer.parseInt(a);
+            r = Integer.parseInt(b);
+            textView.setText("votre resultat =   " + (k + r));
+        }
     }
 
     public void mClick(View view){
@@ -47,10 +51,14 @@ public class MainActivity extends AppCompatActivity {
 
         a = inputa.getText().toString();
         b = inputb.getText().toString();
-        k = Integer.parseInt(a);
-        r = Integer.parseInt(b);
-        textView.setText("votre resultat =   "+(k - r));
 
+        if(a.equals("") || b.equals("")){
+            afficheP("veriéé les nombre");
+        }else {
+            k = Integer.parseInt(a);
+            r = Integer.parseInt(b);
+            textView.setText("votre resultat =   " + (k - r));
+        }
     }
 
     public void fClick(View view){
@@ -59,10 +67,14 @@ public class MainActivity extends AppCompatActivity {
 
         a = inputa.getText().toString();
         b = inputb.getText().toString();
-        k = Integer.parseInt(a);
-        r = Integer.parseInt(b);
-        textView.setText("votre resultat =   "+(k * r));
 
+        if(a.equals("") || b.equals("")){
+            afficheP("veriéé les nombre");
+        }else {
+            k = Integer.parseInt(a);
+            r = Integer.parseInt(b);
+            textView.setText("votre resultat =   " + (k * r));
+        }
     }
 
     public void dClick(View view){
@@ -71,9 +83,25 @@ public class MainActivity extends AppCompatActivity {
 
         a = inputa.getText().toString();
         b = inputb.getText().toString();
-        k = Integer.parseInt(a);
-        r = Integer.parseInt(b);
-        textView.setText("votre resultat =   "+(k / r));
+
+        if(a.equals("") || b.equals("")){
+            afficheP("veriéé les nombre");
+        }else {
+            k = Integer.parseInt(a);
+            r = Integer.parseInt(b);
+            if( r == 0 ){
+                afficheP("pas divisé par 0");
+            }else {
+                textView.setText("votre resultat =   " + (k / r));
+            }
+        }
+    }
+
+    public void afficheP(String ch){
+        Toast toast;
+        toast = Toast.makeText(this, ch,
+                Toast.LENGTH_LONG);
+        toast.show();
 
     }
 
