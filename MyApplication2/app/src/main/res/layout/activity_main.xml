@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="729dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="NOM et PRENOM"
+            android:size="200dp"/>
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="82dp"
+            android:ems="10"
+            android:hint="YOUR NAME"
+            android:inputType="numberDecimal" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="PIZZA   SUPPLEMENTS" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="322dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="205dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/radioButton"
+                    android:layout_width="200"
+                    android:layout_height="53"
+                    android:text=" Capri - 14D" />
+
+                <RadioButton
+                    android:id="@+id/radioButton2"
+                    android:layout_width="200"
+                    android:layout_height="53"
+                    android:text="Laguno  - 13D" />
+
+                <RadioButton
+                    android:id="@+id/radioButton3"
+                    android:layout_width="200"
+                    android:layout_height="53"
+                    android:text="Marguerite- 16D" />
+
+                <RadioButton
+                    android:id="@+id/radioButton4"
+                    android:layout_width="200"
+                    android:layout_height="53"
+                    android:text="Mexicana -18D" />
+
+                <RadioButton
+                    android:id="@+id/radioButton5"
+                    android:layout_width="200"
+                    android:layout_height="53"
+                    android:text="4 Saison -11D" />
+
+                <RadioButton
+                    android:id="@+id/radioButton6"
+                    android:layout_width="200"
+                    android:layout_height="53"
+                    android:text="Spécial -20D" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/checkBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="77"
+                    android:text="X-CHess-1D" />
+
+                <CheckBox
+                    android:id="@+id/checkBox2"
+                    android:layout_width="match_parent"
+                    android:layout_height="77"
+                    android:text="Salami- 1D" />
+
+                <CheckBox
+                    android:id="@+id/checkBox3"
+                    android:layout_width="match_parent"
+                    android:layout_height="77"
+                    android:text="Olives - 1D" />
+
+                <CheckBox
+                    android:id="@+id/checkBox4"
+                    android:layout_width="match_parent"
+                    android:layout_height="77"
+                    android:text="Bacon - 2D" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="AFFICHER COMMANDE" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="TextView" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
