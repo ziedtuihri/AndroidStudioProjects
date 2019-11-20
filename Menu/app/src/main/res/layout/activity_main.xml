@@ -13,5 +13,6 @@
         android:text="VAS-Y TESTER LE MENU ..."
         android:textSize="30sp"
         tools:layout_editor_absoluteX="18dp"
-        tools:layout_editor_absoluteY="278dp" />
+        tools:layout_editor_absoluteY="278dp"
+        tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>

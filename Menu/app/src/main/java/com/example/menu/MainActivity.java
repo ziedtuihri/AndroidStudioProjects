@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -45,6 +46,14 @@ public class MainActivity extends AppCompatActivity {
         }
         if(id == R.id.finish){
             finish();
+            return true;
+        }
+        if(id == R.id.gras){
+            t1.setTypeface(null, Typeface.BOLD);
+            return true;
+        }
+        if(id == R.id.itallique){
+            t1.setTypeface(null, Typeface.BOLD_ITALIC);
             return true;
         }
         return super.onOptionsItemSelected(item);

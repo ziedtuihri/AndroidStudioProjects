@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <menu xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    >
 
     <item
         android:id="@+id/red"
         android:title="colorer Rouge"
         android:icon="@drawable/rouge"
-        />
+        app:showAsAction="ifRoom" />
     <item
         android:id="@+id/green"
-        android:title="colorerVert"
         android:icon="@drawable/vert"
-        />
+        android:title="colorerVert" />
     <item
         android:id="@+id/finish"
         android:title="quitter"
@@ -19,7 +22,7 @@
         />
     <item
         android:id="@+id/style"
-        android:title="Style Texte" />
+        android:title="Style Texte" >
         <menu>
         <item android:id="@+id/gras"
         android:title="Gras"
@@ -30,5 +33,6 @@
                 android:title="Itallique"
                 android:icon="@drawable/italique" />
         </menu>
-
+    </item>
 </menu>
+
