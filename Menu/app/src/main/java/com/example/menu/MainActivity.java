@@ -25,8 +25,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         t1 = findViewById(R.id.textView);
-        btn = findViewById(R.id.red);
+        /*
+        btn = (Button)findViewById(R.id.red);
         registerForContextMenu(btn);
+
+
+         */
     }
 
     @Override
